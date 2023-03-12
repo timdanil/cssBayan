@@ -4,6 +4,7 @@
 	margin: 0 auto;
 	font-weight: 700;
 }
+
 .header {
 	padding: 15px 0px;
 }
@@ -15,15 +16,7 @@
 }
 .main__accordion {
 }
-.accordion__list {
-}
-.accordion__item {
-	padding: 15px 0px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-.accordion__item::after {
+.main__accordion:hover .accordion__item::after{
 	content: '';
 	background-image: url('../img/плюс.png');
 	width: 25px;
@@ -31,19 +24,42 @@
 	background-size: contain;
 	background-position: center;
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	right: 0;
 	transform: translate(-50%);
 }
-.accordion__item:hover::after {
+.main__accordion:hover .accordion__item:hover::after {
 	transform: rotate(45deg);
+	right: 10px;
 }
+.main__accordion:hover .accordion__item{
+	color: black;
+}
+.accordion__list {
+}
+.accordion__item {
+	padding: 15px 0px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	color: blue;
+}
+.accordion__item:hover {
+	cursor: pointer;
+}
+
+
 .accordion__item-title {
 	font-size: 25px;
+
 }
 .accordion__item-img {
 	margin: 20px 0px;
 	width: 200px;
 	align-self: center;
 	display: none;
+	
+}
+.accordion__item:hover img{
+	display: block;
 }
